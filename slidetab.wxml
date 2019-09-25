@@ -1,0 +1,13 @@
+<!-- 滑动tab -->
+<movable-area class="select">
+  <movable-view style="width: 120%" direction="horizontal">
+    <view class="select">
+      <block wx:for="{{optionList}}" wx:key="key">
+        <view class="option {{stateNum==item.id?'selected':''}}"  data-num="{{item.id}}" bindtap="click">
+          <text>{{item.name}}</text>
+          <view class="{{stateNum==item.id?'selected_line':''}}" data-num="{{item.id}}"></view>
+        </view>
+      </block>
+    </view>
+  </movable-view>
+</movable-area>
